@@ -36,7 +36,7 @@ type MyReadonly<T extends object> = {
 };
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from "./util-types";
+import type { Equal, Expect } from "../util-types";
 
 type cases = [Expect<Equal<MyReadonly<Todo1>, Readonly<Todo1>>>];
 

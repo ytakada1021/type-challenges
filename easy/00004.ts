@@ -36,7 +36,7 @@ type MyPick<T, K extends keyof T> = {
 };
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from "./util-types";
+import type { Equal, Expect } from "../util-types";
 
 type cases = [
   Expect<Equal<Expected1, MyPick<Todo, "title">>>,

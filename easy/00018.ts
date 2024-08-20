@@ -25,7 +25,7 @@
 type Length<T extends readonly unknown[]> = T["length"];
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from "./util-types";
+import type { Equal, Expect } from "../util-types";
 
 const tesla = ["tesla", "model 3", "model X", "model Y"] as const;
 const spaceX = [

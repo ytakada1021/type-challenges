@@ -33,7 +33,7 @@ type TupleToObject<T extends readonly (string | number | symbol)[]> = {
 };
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from "./util-types";
+import type { Equal, Expect } from "../util-types";
 
 const tuple = ["tesla", "model 3", "model X", "model Y"] as const;
 const tupleNumber = [1, 2, 3, 4] as const;

@@ -21,7 +21,7 @@
 type Unshift<T extends unknown[], U> = [U, ...T];
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from "./util-types";
+import type { Equal, Expect } from "../util-types";
 
 type cases = [
   Expect<Equal<Unshift<[], 1>, [1]>>,

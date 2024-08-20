@@ -25,7 +25,7 @@
 type MyAwaited<T> = T extends PromiseLike<infer U> ? MyAwaited<U> : T;
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from "./util-types";
+import type { Equal, Expect } from "../util-types";
 
 type X = Promise<string>;
 type Y = Promise<{ field: number }>;

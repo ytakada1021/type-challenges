@@ -21,7 +21,7 @@
 type Push<T extends unknown[], U> = [...T, U];
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from "./util-types";
+import type { Equal, Expect } from "../util-types";
 
 type cases = [
   Expect<Equal<Push<[], 1>, [1]>>,

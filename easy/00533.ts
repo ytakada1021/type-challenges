@@ -24,7 +24,7 @@ type Concat<T extends readonly unknown[], U extends readonly unknown[]> = [
 ];
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from "./util-types";
+import type { Equal, Expect } from "../util-types";
 
 const tuple = [1] as const;
 

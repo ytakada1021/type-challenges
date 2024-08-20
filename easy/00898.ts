@@ -40,7 +40,7 @@ type Includes<T extends readonly any[], U> = T extends [
 //   : false;
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from "./util-types";
+import type { Equal, Expect } from "../util-types";
 
 type cases = [
   Expect<
