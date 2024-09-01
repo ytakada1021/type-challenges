@@ -16,18 +16,18 @@
 
 /* _____________ Your Code Here _____________ */
 
-type NumToTuple<N extends number, R extends unknown[] = []> = R["length"] extends N
-  ? R
-  : NumToTuple<N, [...R, unknown]>;
+type SingleRange<
+  N extends number,
+  IncludesEnd extends boolean = false,
+  Result extends number = never,
+  Counter extends 0[] = []
+> = Counter["length"] extends N
+  ? IncludesEnd extends true
+    ? Result | Counter["length"]
+    : Result
+  : SingleRange<N, IncludesEnd, Result | Counter["length"], [...Counter, 0]>;
 
-// 再帰制限にひっかかるので要見直し;
-type NumberRange<L extends number, H extends number> = NumToTuple<H> extends [...infer T]
-  ? T["length"] extends L
-    ? T["length"]
-    :
-        | T["length"]
-        | (T extends [unknown, ...infer R] ? NumberRange<L, R["length"]> : NumberRange<0, 0>)
-  : never;
+type NumberRange<L extends number, H extends number> = Exclude<SingleRange<H, true>, SingleRange<L>>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from "../util-types";
